@@ -3,21 +3,26 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import PageNotFound from "./pages/PageNotFound";
-import NavigateExample from "./pages/NavigateExample";
+import ProjectsIndex from "./pages/projects/Index";
+import Contact from "./pages/Contact";
+
 //components
 import NavBavr from "./components/NavBar";
+import Footer from "./components/Footer";
 
 const App = () => {
   return (
     <Router>
+      <div className="container mx-auto "></div>
       <NavBavr />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/projects" element={<ProjectsIndex />} />
         <Route path="*" element={<PageNotFound />} />
-        <Route path="/nav-example" element={<NavigateExample />} />
       </Routes>
-      Footer
+      <Footer />
     </Router>
   );
 };
