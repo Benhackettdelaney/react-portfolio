@@ -1,18 +1,39 @@
 [
     {
-        "title": "",
-        "description": "",
+        "slug": "todo-app",
+        "title": "ToDo App",
+        "description": "This is a todo app was made using React. I found this project interesting. I learned about local storage",
         "images": [
             {
-                "caption": "",
-                "path": ""
+                "caption": "Screen shot of the code",
+                "path": "https://picsum.photos/200/300"
 
             }
         ],
-        "date": "",
-        "tags": ["Design", "UI"],
-        "website": "",
-        "github": ""
+        "date": "2023",
+        "tags": ["Javascript", "React", "HTML", "Front-End"],
+        "website": "https://google.com",
+        "github": "https://github.com"
+    },
+
+    {
+        "slug": "giphy-app",
+        "title": "Giphy App",
+        "description": "This is a Gighy app was made using React. I found this project interesting.",
+        "images": [
+            {
+                "caption": "Screen shot of the code",
+                "path": "https://picsum.photos/200/300"
+
+            }
+        ],
+        "date": "2023",
+        "tags": ["Javascript", "React", "HTML", "Front-End", "Rest Client", "API"],
+        "github": "https://github.com"
 
     }
+
+    
+
+    
 ]
