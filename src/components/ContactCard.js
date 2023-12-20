@@ -1,10 +1,10 @@
 const ContactCard = () => {
     return(
-        <div className="card lg:card-side bg-base-100 shadow-xl full-w">
+        <div className="card lg:card-side bg-white shadow-xl w-full">
  
-  <div className="card-body full-w">
+  <div className="card-body w-full">
   <div>
-  <div className="justify-content-center">
+  <div >
         <h1 className="text-4xl font-bold mb-16">Contact me</h1>
         <div >
         <h1 className="text-2xl"><b>Introduction</b></h1>

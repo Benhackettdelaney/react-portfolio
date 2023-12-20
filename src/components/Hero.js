@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 const Hero = () => {
     return(
         <div className="hero min-h-screen bg-base-200  px-4">
-  <div className="hero-content flex-col lg:flex-row-reverse ">
+  <div className="flex-col lg:flex-row-reverse justify-content items-center">
     <div>
       <h1 className="text-5xl font-bold mb-12">Ben Hackett Delaney Portfolio</h1>
       <p className="text-2xl py-2 mb-5">Welcome to my portfolio.</p>

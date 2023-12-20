@@ -24,7 +24,7 @@ console.log("projects", projects)
   }, []);
 
   useEffect(() => {
-    if ( search.length <= 2) {
+    if ( search.length <= 1) {
       setFilteredProjects(projects);
     } else {
       let filter = projects.filter((project) =>
@@ -41,7 +41,7 @@ console.log("projects", projects)
   ))
 
   return (
-    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-3 mt-5 auto-cols-auto pb-16">
+    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-3 bg-zinc-200 p-4 justify-content-center auto-cols-auto pb-16">
     {projectList}
     </div>
   );

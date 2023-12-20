@@ -75,7 +75,7 @@
         "images": [
             {
                 "caption": "Screen shot of the code",
-                "path": "https://picsum.photos/200/300"
+                "path": "../images/student.PNG"
 
             }
         ],
@@ -91,7 +91,7 @@
         "images": [
             {
                 "caption": "Screen shot of the code",
-                "path": "https://picsum.photos/200/300"
+                "path": "../images/countries.PNG"
 
             }
         ],
@@ -108,7 +108,7 @@
         "images": [
             {
                 "caption": "Screen shot of the code",
-                "path": "https://picsum.photos/200/300"
+                "path": "../images/integrated.PNG"
 
             }
         ],
@@ -125,7 +125,7 @@
         "images": [
             {
                 "caption": "Screen shot of the code",
-                "path": "https://picsum.photos/200/300"
+                "path": "../images/festui.PNG"
 
             }
         ],
@@ -142,7 +142,7 @@
         "images": [
             {
                 "caption": "Screen shot of the code",
-                "path": "https://picsum.photos/200/300"
+                "path": "../images/brownT.PNG"
 
             }
         ],
@@ -150,6 +150,57 @@
         "tags": ["Javascript", "HTML", "Front-End"],
         "website": "brown-thomas.vercel.app",
         "github": "https://github.com/Benhackettdelaney/brownThomas",
+        "demo": false
+    },
+    {
+        "slug": "software-development-app",
+        "title": "Software Development App",
+        "description": "This is a Software Development app was made using html. Its shows what i learned when doing the Software Development course.",
+        "images": [
+            {
+                "caption": "Screen shot of the code",
+                "path": "../images/person.PNG"
+
+            }
+        ],
+        "date": "2023",
+        "tags": ["Laravel", "PHP", "Front-End", "Back-End"],
+        "website": false,
+        "github": "https://github.com/y2-SW-project/swproject23-Benhackettdelaney",
+        "demo": false
+    },
+    {
+        "slug": "web-development-app",
+        "title": "Web Development App",
+        "description": "This is a Web Development app was made using html. Its shows what i learned when doing the Web Development making a PHP aplication called Offlicense.",
+        "images": [
+            {
+                "caption": "Screen shot of the code",
+                "path": "../images/person.PNG"
+
+            }
+        ],
+        "date": "2023",
+        "tags": ["Laravel", "PHP", "Front-End", "Back-End"],
+        "website": false,
+        "github": "https://github.com/Benhackettdelaney/Offlicense",
+        "demo": false
+    },
+    {
+        "slug": "college-app",
+        "title": "College App",
+        "description": "This is a College app was made using React. It showed what we learned when using CRUD functionality in a react application.",
+        "images": [
+            {
+                "caption": "Screen shot of the code",
+                "path": "../images/collegeapi.PNG"
+
+            }
+        ],
+        "date": "2023",
+        "tags": ["Javascript", "React", "Front-End", "API"],
+        "website": "https://front-end-ca2-6979.vercel.app",
+        "github": "https://github.com/Benhackettdelaney/front-end-ca2",
         "demo": false
     }
 ]

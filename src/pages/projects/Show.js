@@ -25,15 +25,11 @@ const Show = () => {
 
   return (
     <>
-    <div className='flex flex-1justify-items-center'>
+    <div className='flex flex-1 flex-col justify-center'>
       <HeroShow 
       project={project}
       />
-      {(project.website)?(<a href={project.website} target="_blank" rel="noreferrer" className="btn btn-primary mr-2">Website</a>):""}
-           {(project.github)?(<a href={project.github} rel="noreferrer" target="_blank"className="btn btn-primary mr-2">Github</a>):"" }
-      
-      {(project.demo) ? (<Link to={`/projects/${project.slug}/demo`}><button className='btn btn-success'>Demo</button></Link>) : null}
-      </div>
+     </div>
       
     </>
   );

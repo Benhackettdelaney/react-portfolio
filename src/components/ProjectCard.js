@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 const ProjectCard = ({ project }) => {
   const tags = project.tags.map((tags, i) => {
     return (
-      <div key={i} className="badge badge-outline">
+      <div key={i} className="badge badge-outline flex justify-center items-center p-2">
         {tags}
       </div>
     );
@@ -11,27 +11,29 @@ const ProjectCard = ({ project }) => {
 
   return (
     <div className="card w-96 bg-base-100 shadow-xl">
-      <figure>
+      {/* <figure>
         <img src={project.images[0].path} alt={project.images[0].caption} />
-      </figure>
-      <div className="card-body">
+      </figure> */}
+      <div className="card-body flex flex-col gap-4 ">
         <h2 className="card-title">{project.title}</h2>
         <p>{project.description}</p>
-        <div className="card-actions justify-end">
-          <div className="badge badge-primary">{tags}</div>
-          {project.website ? (
-            <a href={project.website} target="_blank" rel="noreferrer"><button className="btn btn-primary">Website</button></a>
+        {/* <div className="card-actions flex flex-wrap flex-1 justify-between items-center border-2 border-red-400 "> */}
+          <div className=" flex flex-wrap flex-1 gap-4 whitespace-nowrap ">{tags}</div>
+         
+        {/* </div> */}
+        <div className='flex gap-8'>
+        {project.website ? (
+            <a href={project.website} target="_blank" rel="noreferrer"><button className="btn btn-primary btn-outline btn-sm">Website</button></a>
           ) : (
             ""
           )}
           {project.github ? (
-            <a href={project.github}><button className="btn btn-primary">GitHub</button></a>
+            <a href={project.github}><button className="btn btn-primary btn-outline btn-sm">GitHub</button></a>
           ) : (
             ""
           )}
-
-          <Link to={`/projects/${project.slug}`}>Show</Link>
-        </div>
+          </div>
+          <Link className='btn btn-success btn-outline' to={`/projects/${project.slug}`}>Show</Link>
       </div>
     </div>
   );
