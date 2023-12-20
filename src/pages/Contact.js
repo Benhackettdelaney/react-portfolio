@@ -1,6 +1,18 @@
+import ContactCard from "../components/ContactCard";
+
 const Contact = () => {
     return(
-        <h2>Hello from Contact</h2>
+        
+        <div className="hero min-h-screen bg-base-200">
+  <div className="hero-content flex-col lg:flex-row-reverse">
+    <div>
+    <div className="flex justify-content-center">
+       <ContactCard/>
+    </div>
+    </div>
+  </div>
+</div>
+
     );
 };
 

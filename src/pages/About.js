@@ -1,6 +1,18 @@
+import AboutCard from "../components/AboutCard";
 const About = () => {
     return(
-        <h1 className="text-3xl font-bold underline">Hello from About</h1>
+        <>
+        <div className="hero min-h-screen bg-base-200">
+  <div className="hero-content flex-col lg:flex-row-reverse">
+    <div>
+    <div className="flex justify-content-center">
+       <AboutCard/>
+    </div>
+    </div>
+  </div>
+</div>
+        
+        </>
     );
 };
 

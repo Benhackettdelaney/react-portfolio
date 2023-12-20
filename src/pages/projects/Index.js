@@ -1,23 +1,50 @@
-import { useState } from 'react';
-
-import projectsJSON from '../../assets/data/projects.json';
-
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+import { Link } from 'react-router-dom';
 import ProjectCard from '../../components/ProjectCard';
 
-const Index = () => {
-    const [projects, setProjects] = useState(projectsJSON)
+const Index = ({ search }) => {
+  const [projects, setProjects] = useState([]);
+  const [filteredProjects, setFilteredProjects] = useState([]);
 
-    const projectList = projects.map((project, i ) => {
-        return(
-            <ProjectCard key={i} project={project} />
-        );
-    });
+console.log("filteredProjects", filteredProjects)
+console.log("projects", projects)
 
-    return(
-        <div className='grid grid-cols-2 gap-2 justify-items-center '>
-            {projectList}
-        </div>
-    )
-}
+  
+
+  useEffect(() => {
+    axios
+      .get(`https://ben-portfolio-86b65-default-rtdb.firebaseio.com/.json`)
+      .then((response) => {
+        setProjects(response.data);
+      })
+      .catch((e) => {
+        console.log(e);
+      });
+  }, []);
+
+  useEffect(() => {
+    if ( search.length <= 2) {
+      setFilteredProjects(projects);
+    } else {
+      let filter = projects.filter((project) =>
+        project.title.toLowerCase().includes(search.toLowerCase())
+      );
+      setFilteredProjects(filter);
+    }
+  }, [projects, search]);
+
+  if (!projects) return <p>loading...</p>;
+
+  const projectList = filteredProjects.map((project, i ) => (
+    <ProjectCard key={i} project={project}/>
+  ))
+
+  return (
+    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-3 mt-5 auto-cols-auto pb-16">
+    {projectList}
+    </div>
+  );
+};
 
 export default Index;

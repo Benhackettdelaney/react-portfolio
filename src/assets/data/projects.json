@@ -5,15 +5,17 @@
         "description": "This is a todo app was made using React. I found this project interesting. I learned about local storage",
         "images": [
             {
-                "caption": "Screen shot of the code",
-                "path": "https://picsum.photos/200/300"
-
+                "caption": "test caption",
+                "path": "../images/ToDo.PNG",  
+                "type": "image/png",
+                "sizes": "512x512"
             }
         ],
         "date": "2023",
         "tags": ["Javascript", "React", "HTML", "Front-End"],
-        "website": "https://google.com",
-        "github": "https://github.com"
+        "website": "https://react-todo-zeta-pearl.vercel.app",
+        "github": "https://github.com/Benhackettdelaney/react-todo",
+        "demo": true
     },
 
     {
@@ -23,17 +25,131 @@
         "images": [
             {
                 "caption": "Screen shot of the code",
-                "path": "https://picsum.photos/200/300"
+                "path": "../images/giphy.PNG"
 
             }
         ],
         "date": "2023",
         "tags": ["Javascript", "React", "HTML", "Front-End", "Rest Client", "API"],
-        "github": "https://github.com"
+        "github": "https://github.com/IADT/react-giph-Benhackettdelaney",
+        "demo": true
 
+    },
+    {
+        "slug": "countdown-app",
+        "title": "Countdown App",
+        "description": "This is a countdown app was made using React. I found this project interesting. I learned about local storage",
+        "images": [
+            {
+                "caption": "Screen shot of the code",
+                "path": "../images/countdown.PNG"
+
+            }
+        ],
+        "date": "2023",
+        "tags": ["Javascript", "React", "HTML", "Front-End"],
+        "website": "https://react-countdown-seven.vercel.app",
+        "github": "https://github.com/Benhackettdelaney/react-countdown"
+    },
+    {
+        "slug": "person-app",
+        "title": "Person App",
+        "description": "This is a person app was made using React. we did this to learn how to use JSON data",
+        "images": [
+            {
+                "caption": "Screen shot of the code",
+                "path": "../images/person.PNG"
+
+            }
+        ],
+        "date": "2023",
+        "tags": ["Javascript", "React", "JSON","HTML", "Front-End"],
+        "website": "https://react-person.vercel.app",
+        "github": "https://github.com/Benhackettdelaney/react-person",
+        "demo": true    
+    },
+    {
+        "slug": "student-app",
+        "title": "Student App",
+        "description": "This is a student app was made using React. we did this to learn demonstrate how props work",
+        "images": [
+            {
+                "caption": "Screen shot of the code",
+                "path": "https://picsum.photos/200/300"
+
+            }
+        ],
+        "date": "2023",
+        "tags": ["Javascript", "React", "JSON","HTML", "Front-End"],
+        "website": "https://react-student-mu.vercel.app",
+        "github": "https://github.com/Benhackettdelaney/react-student"
+    },
+    {
+        "slug": "countries-app",
+        "title": "Countries App",
+        "description": "This is a countries app was made using React. Its shows users many countries and details bout those countries.",
+        "images": [
+            {
+                "caption": "Screen shot of the code",
+                "path": "https://picsum.photos/200/300"
+
+            }
+        ],
+        "date": "2023",
+        "tags": ["Javascript", "React", "Front-End", "API"],
+        "website": "https://front-end-ca1.vercel.app",
+        "github": "https://github.com/Benhackettdelaney/ca1-countries-example-2",
+        "demo": false
+    },
+    {
+        "slug": "integrated-app",
+        "title": "Intregrated App",
+        "description": "This is a countries app was made using React. Its shows users many countries and details bout those countries.",
+        "images": [
+            {
+                "caption": "Screen shot of the code",
+                "path": "https://picsum.photos/200/300"
+
+            }
+        ],
+        "date": "2023",
+        "tags": ["Javascript", "JSON","HTML"],
+        "website": "https://integrated-pro-12uk.vercel.app",
+        "github": "https://github.com/Benhackettdelaney/integrated-pro",
+        "demo": false
+    },
+    {
+        "slug": "festival-ui-app",
+        "title": "Festival ui App",
+        "description": "This is a festival ui app was made using html. Its shows what i learned when doing the web design frameworks course.",
+        "images": [
+            {
+                "caption": "Screen shot of the code",
+                "path": "https://picsum.photos/200/300"
+
+            }
+        ],
+        "date": "2023",
+        "tags": ["Javascript", "HTML", "Front-End"],
+        "website": "https://web-design-framework.netlify.app",
+        "github": "https://github.com/Benhackettdelaney/festui",
+        "demo": false
+    },
+    {
+        "slug": "brown-thomas-app",
+        "title": "Brown Thomas App",
+        "description": "This is a Brown Thomas app was made using html. Its shows what i learned when doing the web design course.",
+        "images": [
+            {
+                "caption": "Screen shot of the code",
+                "path": "https://picsum.photos/200/300"
+
+            }
+        ],
+        "date": "2023",
+        "tags": ["Javascript", "HTML", "Front-End"],
+        "website": "brown-thomas.vercel.app",
+        "github": "https://github.com/Benhackettdelaney/brownThomas",
+        "demo": false
     }
-
-    
-
-    
 ]
