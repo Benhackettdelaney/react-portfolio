@@ -8,11 +8,11 @@ const AboutCard = () => {
                     <div className="justify-items-center">
                         <div className="mt-12">
                             <h1 className="text-2xl"><b>Introduction</b></h1>
-                            <p>Hi, my name is Ben Hackett Delaney. Welcome to my portfolio</p>
+                            <p>Hello, my name is Ben Hackett-Delaney. Welcome to my portfolio</p>
                         </div>
                         <div className="mt-12">
                             <h1 className="text-2xl"><b>Education</b></h1>
-                            <p>I am a third year student at iadt college in Sallynoggin, Dún Laoghaire</p>
+                            <p>I am a third year student at iadt college in Dún Laoghaire</p>
                         </div>
                         <div className="mt-12">
                             <h1 className="text-2xl"><b>Credentials</b></h1>
@@ -20,11 +20,11 @@ const AboutCard = () => {
                         </div>
                         <div className="mt-12">
                             <h1 className="text-2xl"><b>Projects</b></h1>
-                            <p>The projects seen on this website are projects I have done from when I was in first year to now in third year including integrated projects, countries API, ToDO application and many more</p>
+                            <p>The projects seen on this website are projects I have done from when I was in third year including countries API, ToDO application and many more</p>
                         </div>
                         <div className="mt-12">
                             <h1 className="text-2xl"><b>Interests</b></h1>
-                            <p>Some of my interests are playing games and going to work.</p>
+                            <p>Some of my interests are playing sports and going online.</p>
                         </div>
                     </div>
                 </div>

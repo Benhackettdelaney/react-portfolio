@@ -7,17 +7,17 @@ const ContactCard = () => {
                       <h1 className="text-4xl font-bold mb-16">Contact me</h1>
                       <div>
                           <h1 className="text-2xl"><b>Introduction</b></h1>
-                          <p className="mt-5">Get in contact with me.</p>
+                          <p className="mt-5">Get in contact.</p>
                       </div>
                       <div className="mt-12">
                           <h1 className="text-2xl"><b>Email</b></h1>
                           <p className="mt-5">N00211885@iadt.ie</p>
-                          <p className="mt-5">benhackettdelaney9723@gmail.com</p>
+                          <p className="mt-5">benhd@gmail.com</p>
                       </div>
                       <div className="mt-12">
                           <h1 className="text-2xl"><b>Social media links</b></h1>
-                          <p className="mt-5">Instagram: don't have one</p>
-                          <p className="mt-5">Facebook: don't have one</p>
+                          <p className="mt-5">Whatsapp: don't have one</p>
+                          <p className="mt-5">Cmail: don't have one</p>
                       </div>
                   </div>
               </div>
