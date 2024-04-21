@@ -11,7 +11,7 @@ const NavBar = ({ onHandleChange, search, project }) => {
     };
 
     return (
-        <div className="navbar bg-orange-600 text-white">
+        <div className="navbar bg-stone-900 text-white">
             <div className="navbar-start">
                 <div className="dropdown flex">
                     <label tabIndex={0} className="btn btn-ghost btn-circle">
