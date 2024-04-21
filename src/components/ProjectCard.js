@@ -1,28 +1,25 @@
 import { Link } from 'react-router-dom';
 
 const ProjectCard = ({ project }) => {
-  const tags = project.tags.map((tags, i) => {
+  const tags = project.tags.map((tag, i) => {
     return (
       <div key={i} className="badge badge-outline flex justify-center items-center p-2">
-        {tags}
+        {tag}
       </div>
     );
   });
 
   return (
-    <div className="card w-96 bg-base-100 shadow-xl">
+    <div className="card w-96 bg-stone-900 shadow-xl text-white">
       {/* <figure>
         <img src={project.images[0].path} alt={project.images[0].caption} />
       </figure> */}
-      <div className="card-body flex flex-col gap-4 ">
+      <div className="card-body flex flex-col gap-4">
         <h2 className="card-title">{project.title}</h2>
         <p>{project.description}</p>
-        {/* <div className="card-actions flex flex-wrap flex-1 justify-between items-center border-2 border-red-400 "> */}
-          <div className=" flex flex-wrap flex-1 gap-4 whitespace-nowrap ">{tags}</div>
-         
-        {/* </div> */}
+        <div className="flex flex-wrap flex-1 gap-4 whitespace-nowrap">{tags}</div>
         <div className='flex gap-8'>
-        {project.website ? (
+          {project.website ? (
             <a href={project.website} target="_blank" rel="noreferrer"><button className="btn btn-primary btn-outline btn-sm">Website</button></a>
           ) : (
             ""
@@ -32,8 +29,8 @@ const ProjectCard = ({ project }) => {
           ) : (
             ""
           )}
-          </div>
-          <Link className='btn btn-success btn-outline' to={`/projects/${project.slug}`}>Show</Link>
+        </div>
+        <Link className='btn btn-success btn-outline' to={`/projects/${project.slug}`}>Show</Link>
       </div>
     </div>
   );
