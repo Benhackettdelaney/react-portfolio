@@ -1,36 +1,34 @@
 const AboutCard = () => {
-    return(
-        <div className="card lg:card-side bg-black text-white shadow-xl">
-            <div className="card-body">
-                <div>
-                    <h1 className="text-4xl font-bold mb-5">About me</h1>
-                    <img src="https://daisyui.com/images/stock/photo-1635805737707-575885ab0820.jpg" className="max-w-sm rounded-lg shadow-2xl" alt="Profile" />
-                    <div className="justify-items-center">
-                        <div className="mt-12">
-                            <h1 className="text-2xl"><b>Introduction</b></h1>
-                            <p>Hello, my name is Ben Hackett-Delaney. Welcome to my portfolio</p>
-                        </div>
-                        <div className="mt-12">
-                            <h1 className="text-2xl"><b>Education</b></h1>
-                            <p>I am a third year student at iadt college in Dún Laoghaire</p>
-                        </div>
-                        <div className="mt-12">
-                            <h1 className="text-2xl"><b>Credentials</b></h1>
-                            <p>Over the past three years I have been learning how to create websites and applications using many different libraries such as basic HTML to react projects.</p>
-                        </div>
-                        <div className="mt-12">
-                            <h1 className="text-2xl"><b>Projects</b></h1>
-                            <p>The projects seen on this website are projects I have done from when I was in third year including countries API, ToDO application and many more</p>
-                        </div>
-                        <div className="mt-12">
-                            <h1 className="text-2xl"><b>Interests</b></h1>
-                            <p>Some of my interests are playing sports and going online.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+  return (
+    <div className="bg-black text-white w-full">
+      <div className="max-w-6xl mx-auto py-10 px-4">
+        <h2 className="text-3xl font-medium mb-6 tracking-tight">
+          About
+        </h2>
+
+        <div className="max-w-3xl space-y-6 text-neutral-300 leading-relaxed">
+          <p>
+            I’m a Creative Computing student with an interest in building clean,
+            functional web applications and interactive experiences.
+          </p>
+
+          <p>
+            My work focuses mainly on frontend development using React, alongside
+            backend and API-based projects developed throughout my studies.
+          </p>
+
+          <p>
+            This portfolio is a selection of projects created during my time in
+            college, ranging from small experiments to more structured applications.
+          </p>
+
+          <p className="text-neutral-400 text-sm">
+            Graduated IADT, Dún Laoghaire.
+          </p>
         </div>
-    );
-}
+      </div>
+    </div>
+  );
+};
 
 export default AboutCard;

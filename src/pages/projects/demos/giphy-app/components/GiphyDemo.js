@@ -5,12 +5,14 @@ import "../assets/app.css";
 
 export default function GiphyDemo() {
   return (
-    <Container className="mt-5">
-      <Row>
-        <Col>
-          <GiphyViewer />
-        </Col>
-      </Row>
-    </Container>
+    <div className="bg-black text-white">
+      <Container fluid className="bg-black text-white py-4">
+        <Row>
+          <Col>
+            <GiphyViewer />
+          </Col>
+        </Row>
+      </Container>
+    </div>
   );
 }

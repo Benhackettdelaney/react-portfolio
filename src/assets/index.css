@@ -2,7 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 html { scroll-behavior: smooth; }
-html, body {
-  background-color: #000;
+html, body, #root {
+  background: #000 !important;
   color: #fff;
+  min-height: 100%;
 }
+

@@ -1,38 +1,58 @@
 const ProjectCard = ({ project, onShow }) => {
   const tags = (project.tags || []).map((tag, i) => (
-    <div
+    <span
       key={i}
-      className="badge badge-outline flex justify-center items-center p-2"
+      className="badge badge-outline text-xs px-3 py-1 border-neutral-700"
     >
       {tag}
-    </div>
+    </span>
   ));
 
   return (
-    <div className="card w-96 bg-stone-900 shadow-xl text-white">
+    <div
+      className="
+        card
+        w-full
+        bg-neutral-950
+        text-white
+        border border-neutral-800
+        rounded-2xl
+        shadow-lg
+        transition-all
+        hover:-translate-y-1
+        hover:border-neutral-600
+      "
+    >
       <div className="card-body flex flex-col gap-4">
-        <h2 className="card-title">{project.title}</h2>
-        <p>{project.description}</p>
+        <h2 className="text-xl font-semibold tracking-tight">
+          {project.title}
+        </h2>
 
-        <div className="flex flex-wrap flex-1 gap-4 whitespace-nowrap">{tags}</div>
+        <p className="text-sm text-neutral-400 leading-relaxed">
+          {project.description}
+        </p>
 
-        <div className="flex gap-8">
-          {project.website ? (
+        <div className="flex flex-wrap gap-2">
+          {tags}
+        </div>
+
+        <div className="flex gap-4 mt-auto">
+          {project.website && (
             <a href={project.website} target="_blank" rel="noreferrer">
-              <button className="btn btn-primary btn-outline btn-sm">Website</button>
+              <button className="btn btn-xs btn-outline">Website</button>
             </a>
-          ) : null}
+          )}
 
-          {project.github ? (
+          {project.github && (
             <a href={project.github} target="_blank" rel="noreferrer">
-              <button className="btn btn-primary btn-outline btn-sm">GitHub</button>
+              <button className="btn btn-xs btn-outline">GitHub</button>
             </a>
-          ) : null}
+          )}
         </div>
 
         <button
-          className="btn btn-success btn-outline"
-          onClick={() => onShow?.(project)}
+          className="btn btn-sm btn-outline btn-success mt-4"
+          onClick={() => onShow(project)}
         >
           Show
         </button>

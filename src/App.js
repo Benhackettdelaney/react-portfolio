@@ -1,13 +1,13 @@
 import { useState } from "react";
 
-// sections/components
+// components/sections
 import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
 import Hero from "./components/Hero";
 import AboutCard from "./components/AboutCard";
 import ContactCard from "./components/ContactCard";
 
-// your projects list section
+// projects section
 import ProjectsIndex from "./pages/projects/Index";
 
 const App = () => {
@@ -17,25 +17,25 @@ const App = () => {
 
   return (
     <>
-      <NavBar search={search} onHandleChange={onHandleChange} />
+      <NavBar />
 
-      <section id="home">
+      <section id="home" className="bg-black">
         <Hero />
       </section>
 
-      <section id="about" className="bg-base-200 py-16 px-4">
+      <section id="about" className="bg-black py-10 px-4">
         <div className="max-w-5xl mx-auto">
           <AboutCard />
         </div>
       </section>
 
-      <section id="projects" className="py-16 px-4">
+      <section id="projects" className="bg-black py-10 px-4">
         <div className="max-w-6xl mx-auto">
-          <ProjectsIndex search={search} />
+          <ProjectsIndex />
         </div>
       </section>
 
-      <section id="contact" className="py-16 px-4 bg-zinc-200">
+      <section id="contact" className="bg-black py-10 px-4">
         <div className="max-w-5xl mx-auto">
           <ContactCard />
         </div>

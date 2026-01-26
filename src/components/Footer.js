@@ -1,13 +1,12 @@
 const Footer = () => {
   return (
-    <footer className="footer p-10 bg-stone-900 text-white">
-      <nav>
-        <header className="footer-title">Sections</header>
-        <a href="#home" className="link link-hover">Home</a>
-        <a href="#about" className="link link-hover">About</a>
-        <a href="#projects" className="link link-hover">Projects</a>
-        <a href="#contact" className="link link-hover">Contact</a>
-      </nav>
+    <footer className="bg-black text-neutral-500 py-8 px-4 border-t border-neutral-800">
+      <div className="max-w-6xl mx-auto text-sm flex justify-between items-center">
+        <span>© {new Date().getFullYear()} Ben Hackett-Delaney</span>
+        <span className="text-neutral-600">
+          Built with React & Tailwind
+        </span>
+      </div>
     </footer>
   );
 };
