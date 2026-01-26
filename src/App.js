@@ -1,38 +1,48 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { useState } from 'react';
-//pages
-import Home from "./pages/Home";
-import About from "./pages/About";
-import PageNotFound from "./pages/PageNotFound";
-import ProjectsIndex from "./pages/projects/Index";
-import ProjectsShow from "./pages/projects/Show";
-import ProjectsDemo from "./pages/projects/Demo";
-import Contact from "./pages/Contact";
-//components
-import NavBavr from "./components/NavBar";
+import { useState } from "react";
+
+// sections/components
+import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
+import Hero from "./components/Hero";
+import AboutCard from "./components/AboutCard";
+import ContactCard from "./components/ContactCard";
+
+// your projects list section
+import ProjectsIndex from "./pages/projects/Index";
 
 const App = () => {
-const [search, setSearch] = useState("");
+  const [search, setSearch] = useState("");
 
-const onHandleChange = (e) => {
-  setSearch(e.target.value)
-}
+  const onHandleChange = (e) => setSearch(e.target.value);
+
   return (
-    <Router>
-      <div className="container mx-auto "></div>
-      <NavBavr onHandleChange={onHandleChange}/>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/projects" element={<ProjectsIndex search={search} />} />
-        <Route path="/projects/:slug" element={<ProjectsShow />} />
-        <Route path="/projects/:slug/demo" element={<ProjectsDemo />} />
-        <Route path="*" element={<PageNotFound />} />
-      </Routes>
+    <>
+      <NavBar search={search} onHandleChange={onHandleChange} />
+
+      <section id="home">
+        <Hero />
+      </section>
+
+      <section id="about" className="bg-base-200 py-16 px-4">
+        <div className="max-w-5xl mx-auto">
+          <AboutCard />
+        </div>
+      </section>
+
+      <section id="projects" className="py-16 px-4">
+        <div className="max-w-6xl mx-auto">
+          <ProjectsIndex search={search} />
+        </div>
+      </section>
+
+      <section id="contact" className="py-16 px-4 bg-zinc-200">
+        <div className="max-w-5xl mx-auto">
+          <ContactCard />
+        </div>
+      </section>
+
       <Footer />
-    </Router>
+    </>
   );
 };
 
