@@ -11,22 +11,20 @@ import SkillSelection from "./components/SkillSelection";
 
 const App = () => {
   const [search, setSearch] = useState("");
-
   const onHandleChange = (e) => setSearch(e.target.value);
 
   return (
     <>
       <NavBar />
 
-      {/* ✅ Consistent centered container + consistent padding */}
       <main className="bg-black text-white">
-        <section id="home" className="py-12 md:py-20">
+        <section id="home" className="pt-12 pb-6 md:pt-20 md:pb-10">
           <div className="max-w-6xl mx-auto px-4 md:px-8">
             <Hero />
           </div>
         </section>
 
-        <section id="about" className="py-12 md:py-16">
+        <section id="about" className="pt-6 pb-12 md:pt-10 md:pb-16">
           <div className="max-w-6xl mx-auto px-4 md:px-8">
             <AboutCard />
           </div>

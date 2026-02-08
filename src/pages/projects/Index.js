@@ -51,44 +51,48 @@ const Index = () => {
   ));
 
   return (
-    <div className="bg-black text-white p-4 pb-16">
+    <div className="bg-black text-white pb-16">
       {/* Header */}
-      <div className="max-w-6xl mx-auto mb-10">
+      <div className="mb-10 text-left">
         <h2 className="text-3xl font-medium tracking-tight text-white">
           Projects
         </h2>
-        <p className="text-neutral-400 mt-2 max-w-xl pl-4">
+        <p className="text-neutral-400 mt-2 max-w-xl">
           A curated selection of my strongest work so far.
         </p>
       </div>
 
       {/* Project cards */}
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
-        {projectList}
-      </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">{projectList}</div>
 
       {/* Inline details */}
       {activeProject && (
-        <div className="max-w-6xl mx-auto mt-10 bg-black border border-neutral-800 rounded p-6 text-white">
-          <div className="flex items-start justify-between gap-4">
-            <h2 className="text-3xl font-bold">{activeProject.title}</h2>
+        <div className="mt-10 bg-black border border-neutral-800 rounded text-white">
+          {/* Header (padded) */}
+          <div className="p-6 flex items-start justify-between gap-4">
+            <h2 className="text-3xl font-bold text-left">
+              {activeProject.title}
+            </h2>
+
             <button
-              className="btn btn-sm btn-outline text-white"
+              className="btn btn-sm bg-transparent border-neutral-700 text-white hover:bg-transparent hover:border-white"
               onClick={() => setActiveProject(null)}
             >
               Close
             </button>
           </div>
 
+          {/* Image (full width) */}
           {activeProject.images?.[0]?.path && (
             <img
-              className="mt-6 max-h-[450px] border-b border-neutral-800 w-full object-contain"
+              className="max-h-[500px] border-t border-b border-neutral-800 w-full object-contain"
               src={activeProject.images[0].path}
               alt=""
             />
           )}
 
-          <div className="mt-6">
+          {/* Content (padded) */}
+          <div className="p-6 text-left">
             <p className="mb-4">
               <b className="text-xl mr-2">Description:</b>
               {activeProject.description}
@@ -116,16 +120,26 @@ const Index = () => {
 
             <div className="flex gap-4 flex-wrap">
               {activeProject.website && (
-                <a href={activeProject.website} target="_blank" rel="noreferrer" className="no-underline">
-                  <button className="btn btn-outline btn-sm text-white">
+                <a
+                  href={activeProject.website}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="no-underline"
+                >
+                  <button className="btn btn-sm bg-transparent border-neutral-700 text-white hover:bg-transparent hover:border-white">
                     Website
                   </button>
                 </a>
               )}
 
               {activeProject.github && (
-                <a href={activeProject.github} target="_blank" rel="noreferrer" className="no-underline">
-                  <button className="btn btn-outline btn-sm text-white">
+                <a
+                  href={activeProject.github}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="no-underline"
+                >
+                  <button className="btn btn-sm bg-transparent border-neutral-700 text-white hover:bg-transparent hover:border-white">
                     GitHub
                   </button>
                 </a>

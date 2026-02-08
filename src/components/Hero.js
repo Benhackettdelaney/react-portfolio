@@ -2,11 +2,11 @@ const Hero = () => {
   const linkStyle = { color: "#fff", textDecoration: "none" };
 
   return (
-    <div className="bg-black text-white px-4">
+    <div className="bg-black text-white">
       <div className="max-w-5xl mx-auto min-h-screen flex items-center">
         <div className="w-full grid grid-cols-1 md:grid-cols-[1.2fr_0.8fr] gap-12 items-center">
           {/* Left */}
-          <div>
+          <div className="text-left">
             <p className="text-sm text-neutral-400 tracking-wide mb-4">
               Creative Computing • Frontend / Web Development
             </p>
@@ -20,7 +20,7 @@ const Hero = () => {
               demos, and contact details.
             </p>
 
-            <div className="mt-10 flex flex-wrap gap-3">
+            <div className="mt-10 flex flex-wrap items-start justify-start gap-3">
               <a
                 href="#projects"
                 style={linkStyle}

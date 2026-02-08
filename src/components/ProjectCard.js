@@ -8,12 +8,13 @@ const ProjectCard = ({ project, onShow }) => {
     </span>
   ));
 
+  const textBtn =
+    "btn btn-xs bg-transparent border-neutral-700 text-white hover:bg-transparent hover:border-white hover:text-white";
+
   return (
     <div className="w-full bg-black text-white border border-neutral-800 rounded-2xl transition-all hover:-translate-y-1 hover:border-neutral-600">
-      <div className="p-6 flex flex-col gap-4">
-        <h2 className="text-xl font-semibold tracking-tight">
-          {project.title}
-        </h2>
+      <div className="p-6 flex flex-col gap-4 text-left">
+        <h2 className="text-xl font-semibold tracking-tight">{project.title}</h2>
 
         <p className="text-sm text-neutral-400 leading-relaxed">
           {project.description}
@@ -29,16 +30,7 @@ const ProjectCard = ({ project, onShow }) => {
               rel="noreferrer"
               className="no-underline"
             >
-              <button
-                className="
-                  btn btn-xs
-                  border-neutral-600
-                  text-neutral-200
-                  hover:bg-white hover:text-black hover:border-white
-                "
-              >
-                Website
-              </button>
+              <button className={textBtn}>Website</button>
             </a>
           )}
 
@@ -49,22 +41,13 @@ const ProjectCard = ({ project, onShow }) => {
               rel="noreferrer"
               className="no-underline"
             >
-              <button
-                className="
-                  btn btn-xs
-                  border-neutral-600
-                  text-neutral-200
-                  hover:bg-white hover:text-black hover:border-white
-                "
-              >
-                GitHub
-              </button>
+              <button className={textBtn}>GitHub</button>
             </a>
           )}
         </div>
 
         <button
-          className="btn btn-sm btn-outline btn-success mt-4"
+          className="btn btn-sm bg-transparent border-neutral-700 text-white hover:bg-transparent hover:border-white"
           onClick={() => onShow(project)}
         >
           Show
