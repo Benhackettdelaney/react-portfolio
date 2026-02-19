@@ -7,7 +7,7 @@ const AboutCard = () => {
 
       <div className="max-w-3xl space-y-6 text-neutral-300 leading-relaxed text-left">
         <p>
-          I’m a Creative Computing student with an interest in building clean,
+          I’m a Creative Computing graduate with an interest in building clean,
           functional web applications and interactive experiences.
         </p>
 

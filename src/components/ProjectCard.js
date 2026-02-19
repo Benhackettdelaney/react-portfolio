@@ -1,4 +1,8 @@
-const ProjectCard = ({ project, onShow }) => {
+import { useNavigate } from "react-router-dom";
+
+const ProjectCard = ({ project }) => {
+  const navigate = useNavigate();
+
   const tags = (project.tags || []).map((tag, i) => (
     <span
       key={i}
@@ -30,7 +34,9 @@ const ProjectCard = ({ project, onShow }) => {
               rel="noreferrer"
               className="no-underline"
             >
-              <button className={textBtn}>Website</button>
+              <button className={textBtn} type="button">
+                Website
+              </button>
             </a>
           )}
 
@@ -41,14 +47,17 @@ const ProjectCard = ({ project, onShow }) => {
               rel="noreferrer"
               className="no-underline"
             >
-              <button className={textBtn}>GitHub</button>
+              <button className={textBtn} type="button">
+                GitHub
+              </button>
             </a>
           )}
         </div>
 
         <button
+          type="button"
           className="btn btn-sm bg-transparent border-neutral-700 text-white hover:bg-transparent hover:border-white"
-          onClick={() => onShow(project)}
+          onClick={() => navigate(`/projects/${project.slug}`)}
         >
           Show
         </button>

@@ -4,7 +4,7 @@ const NavBar = () => {
       <div className="max-w-6xl mx-auto px-4 md:px-8 py-4 flex items-center justify-between">
         {/* Brand */}
         <a
-          href="#home"
+          href="/#home"
           className="text-lg tracking-tight font-medium text-white no-underline"
         >
           Ben Hackett-Delaney
@@ -13,28 +13,21 @@ const NavBar = () => {
         {/* Links */}
         <nav className="flex gap-6 text-sm text-neutral-300">
           <a
-            href="#about"
+            href="/#about"
             className="text-neutral-300 no-underline hover:text-white transition-colors duration-200"
           >
             About
           </a>
 
           <a
-            href="#projects"
+            href="/#projects"
             className="text-neutral-300 no-underline hover:text-white transition-colors duration-200"
           >
             Projects
           </a>
 
           <a
-            href="#experience"
-            className="text-neutral-300 no-underline hover:text-white transition-colors duration-200"
-          >
-            Experience
-          </a>
-
-          <a
-            href="#contact"
+            href="/#contact"
             className="text-neutral-300 no-underline hover:text-white transition-colors duration-200"
           >
             Contact

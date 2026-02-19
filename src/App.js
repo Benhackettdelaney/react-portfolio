@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
 import Hero from "./components/Hero";
@@ -8,46 +6,58 @@ import ContactCard from "./components/ContactCard";
 
 import ProjectsIndex from "./pages/projects/Index";
 import SkillSelection from "./components/SkillSelection";
+import Show from "./pages/projects/Show";
+
+import { Routes, Route } from "react-router-dom";
+
+const Home = () => {
+  const container = "max-w-6xl mx-auto px-4 md:px-8";
+  const sectionSpacing = "py-8 md:py-10";
+
+  return (
+    <main className="bg-black text-white">
+      <section id="home" className="pt-10 pb-6 md:pt-14 md:pb-8">
+        <div className={container}>
+          <Hero />
+        </div>
+      </section>
+
+      {/* About + Experience together */}
+      <section id="about" className={sectionSpacing}>
+        <div className={container}>
+          <AboutCard />
+
+          {/* Experience sits directly under About */}
+          <div id="experience" className="mt-8 md:mt-10">
+            <SkillSelection />
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" className={sectionSpacing}>
+        <div className={container}>
+          <ProjectsIndex />
+        </div>
+      </section>
+
+      <section id="contact" className="py-8 md:py-10 pb-14">
+        <div className={container}>
+          <ContactCard />
+        </div>
+      </section>
+    </main>
+  );
+};
 
 const App = () => {
-  const [search, setSearch] = useState("");
-  const onHandleChange = (e) => setSearch(e.target.value);
-
   return (
     <>
       <NavBar />
 
-      <main className="bg-black text-white">
-        <section id="home" className="pt-12 pb-6 md:pt-20 md:pb-10">
-          <div className="max-w-6xl mx-auto px-4 md:px-8">
-            <Hero />
-          </div>
-        </section>
-
-        <section id="about" className="pt-6 pb-12 md:pt-10 md:pb-16">
-          <div className="max-w-6xl mx-auto px-4 md:px-8">
-            <AboutCard />
-          </div>
-        </section>
-
-        <section id="projects" className="py-12 md:py-16">
-          <div className="max-w-6xl mx-auto px-4 md:px-8">
-            <ProjectsIndex />
-          </div>
-        </section>
-
-        <section id="experience" className="py-12 md:py-16">
-          <div className="max-w-6xl mx-auto px-4 md:px-8">
-            <SkillSelection />
-          </div>
-        </section>
-
-        <section id="contact" className="py-12 md:py-16 pb-20">
-          <div className="max-w-6xl mx-auto px-4 md:px-8">
-            <ContactCard />
-          </div>
-        </section>
-      </main>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/projects/:slug" element={<Show />} />
+      </Routes>
 
       <Footer />
     </>

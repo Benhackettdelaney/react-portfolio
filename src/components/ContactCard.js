@@ -14,12 +14,12 @@ const ContactCard = () => {
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-3xl">
         <a
-          href="mailto:benhd@gmail.com"
+          href="mailto:benhd3108@gmail.com"
           style={linkStyle}
           className="border border-neutral-700 rounded-xl px-6 py-4 text-left hover:border-white transition-colors duration-200"
         >
           <span className="text-sm text-neutral-400 block mb-1">Email</span>
-          <span className="text-base text-white">benhd@gmail.com</span>
+          <span className="text-base text-white">benhd3108@gmail.com</span>
         </a>
 
         <a
